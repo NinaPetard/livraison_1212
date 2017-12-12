@@ -8,7 +8,7 @@ import static org.hamcrest.CoreMatchers.not;
 import static org.hamcrest.CoreMatchers.equalTo;
 
 
-public class Test_Calculatrice {
+public class T_Calculatrice1 {
 
 	Calculatrice maCalculatrice;
 
@@ -31,25 +31,6 @@ public class Test_Calculatrice {
 	    assertTrue("Le résultat est faux", resultat == 1L);
 	  }
 	
-	@Test
-	public void monScenarioSoustraction2() {
-		Long resultat = maCalculatrice.soustraction(3L, 1L);
-		 assertThat(resultat, allOf(equalTo(2L),not(3L)));
-	}
-	
-
-	@Test
-	  public void scenatioNull() {
-		String resultat = maCalculatrice.givenull();
-	    assertNull("should be null", resultat);
-	  }
-	
-	@Test
-	  public void scenarioNotSameOK() {
-		long res1 = maCalculatrice.addition(2L, 2L);
-		long res2 = maCalculatrice.addition(2L, 3L);
-	    assertNotSame("should not be same Object", res1, res2);
-	  }
 	
 	//celui-ci fail
 	//@Test
